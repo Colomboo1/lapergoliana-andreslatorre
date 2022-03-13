@@ -1,5 +1,5 @@
 import React from "react";
-import "../navbar/index.css";
+import "./index.css";
 import Logo from "../../assets/logo.svg";
 import Button from '@mui/material/Button';
 
@@ -8,7 +8,7 @@ function NavBar () {
     return(
         <header>
             <div className="container-logo">
-            <img src={Logo} alt="Logo" className="logo"/>
+                <img src={Logo} alt="Logo" className="logo"/>
             </div>
             <ul className="navbar">
                 <li><Button variant="contained">home</Button></li>
