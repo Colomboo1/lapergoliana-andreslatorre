@@ -1,0 +1,9 @@
+@import "../../../../src/scss/abstracts/variable" ;
+
+.cart {
+    background-color: $cream-color;
+    border-radius: 4%;
+    padding: 13px;
+    margin-top: 10px;
+    height: 46px;
+}

@@ -1,4 +1,5 @@
-import NavBar from "./components/navbar/index.js"
+import NavBar from "./components/header/navbar/index.js"
+import Cart from "./components/header/cart/index.js";
 import './App.scss';
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar/>
-        
+        <Cart/>
         
       </header>
     </div>
