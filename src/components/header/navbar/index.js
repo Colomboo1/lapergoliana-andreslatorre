@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import Logo from "../../../assets/logo.svg";
-
+import Cart from "../cart/index"
 
 function NavBar () {
 
@@ -17,6 +17,7 @@ function NavBar () {
                     <li><button >Nosotras</button></li>
                     <li><button >Contacto</button></li>
                 </ul>
+                <Cart></Cart>
             </div>
         </header>
     )

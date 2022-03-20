@@ -4,6 +4,20 @@
     
     //background-image: url("../src/assets/background.jpg");
 }
+body{
+    background-image: url("../src/assets/background\ roses.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.App{
+
+}
+.wrapper{
+    width: 100%;
+    max-width: 1024px;
+    margin: 150px auto ;
+    background-image:url("../src/assets/paper\ old.jpg");
+}
 header{
     display: flex;
     margin-bottom: 25px;

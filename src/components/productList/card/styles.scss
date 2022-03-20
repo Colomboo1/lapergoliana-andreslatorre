@@ -1,0 +1,26 @@
+@import "../../../scss/abstracts/variable" ;
+
+.card{
+    background-color: $blue-color;
+    border-radius: 4%;
+    padding: 15px;
+    margin: 25px;
+    
+  
+    .product {
+        display: flex;
+        justify-content: center;
+    }
+    i {
+       display: block;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+}
+.spam{
+    
+}
