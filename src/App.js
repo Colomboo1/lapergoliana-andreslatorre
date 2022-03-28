@@ -1,6 +1,7 @@
-import NavBar from "./components/header/navbar/index.js"
+import NavBar from "./components/header/navbar/index.js";
 import ProductList from "./components/productList/card/index.js";
 import './App.scss';
+import ProductsListArray from "./components/productList/itemListContainer/itemList/index.js";
 
 function App() {
   return (
@@ -12,9 +13,6 @@ function App() {
         
         <article>
           <ProductList/>
-          <ProductList/>
-          <ProductList/>
-          <ProductList/> 
         </article> 
 
       </div>
