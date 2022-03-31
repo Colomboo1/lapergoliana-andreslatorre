@@ -2,16 +2,20 @@ import React from "react";
 import "./styles.scss";
 import ItemCount from "../itemCount/index.js"
 import Item from "../item/index"
+import ItemDetailList from "../itemDetailList";
+import {Link} from  "react-router-dom";
 
 
 function Card ({products}) {
 
     return(
-        <div className="card">
-            <a href="Producto" className="product"><Item name={products.name} img={products.img} price={products.price} stock={products.stock} id={products.id}/></a>  
-            <ItemCount/>
+        <Link to="/:category/:id" element={<ItemDetailList/>}>
+            <div className="card">
+                <a href="Producto" className="product"><Item product={products}/></a>  
+                <ItemCount/>
 
-        </div>
+            </div>
+        </Link>
     )
 }
 

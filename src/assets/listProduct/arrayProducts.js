@@ -4,76 +4,76 @@ export const arrayProducts=
         {
             id:1,
             name:"kimono turquesa con flores",
-            img:"https://drive.google.com/file/d/1Ii6mC2DgxbsokmptYVISlk2HL-eBKHtD/view?usp=sharing",
+            img:"https://drive.google.com/uc?export=view&id=1Ii6mC2DgxbsokmptYVISlk2HL-eBKHtD",
             price:2500,
             stock:5,
             color:"turquesa",
-            type:"kimono",
+            category:"kimono",
             description: "kimono de saten turquesa con flores amarillas y detalles en rojo de confeccion artesanal"
 
         },
         {
             id:2,
             name:"kimono salmon con flores",
-            img:"https://drive.google.com/file/d/1aJG6Y8Y-goIAe5OVOby2G3XgtzACgLPZ/view?usp=sharing",
+            img:"https://drive.google.com/uc?export=view&id=1aJG6Y8Y-goIAe5OVOby2G3XgtzACgLPZ",
             price:2500,
             stock:5,
             color:"salmon",
-            type:"kimono",
+            category:"kimono",
             description: "kimono de saten salmon y detalles en turquesa de confeccion artesanal"
 
         },
         {
             id:3,
             name:"kimono rojo con flores",
-            img:"https://drive.google.com/file/d/1cj9cEGKlMgMxY9uhX3s0lP0gY9WgcuHD/view?usp=sharing",
+            img:"https://drive.google.com/uc?export=view&id=1cj9cEGKlMgMxY9uhX3s0lP0gY9WgcuHD",
             price:2500,
             stock:5,
             color:"rojo",
-            type:"kimono",
+            category:"kimono",
             description: "kimono de saten rojo con flores rosas y detalles en turquesa de confeccion artesanal"
 
         },
         {
             id:4,
             name:"bata negra con detalles",
-            img:"https://drive.google.com/file/d/1o2A0Lblmp4zN1hRs_E9QKkzKaOPelJlI/view?usp=sharing",
+            img:"https://drive.google.com/uc?export=view&id=1o2A0Lblmp4zN1hRs_E9QKkzKaOPelJlI",
             price:2500,
             stock:5,
             color:"negro",
-            type:"bata",
+            category:"bata",
             description: "bata de saten negro con detalles blancos de confeccion artesanal"
 
         },
         {
             id:5,
             name:"bata blanca con detalles",
-            img:"https://drive.google.com/file/d/1aP-sZCwgShJvUIkDEXJXgUci3_oHUJoX/view?usp=sharing",
+            img:"https://drive.google.com/uc?export=view&id=1aP-sZCwgShJvUIkDEXJXgUci3_oHUJoX",
             price:2500,
             stock:5,
             color:"blanco",
-            type:"bata",
+            category:"bata",
             description: "bata de saten blanco con detalles varios de confeccion artesanal"
 
         },
         {
             id:6,
             name:"pañuelo verde",
-            img:"https://drive.google.com/file/d/17sqBjmJdhAXLskBvk-7ydrn7BLYUlyAm/view?usp=sharing",
+            img:"https://images.pexels.com/photos/6070105/pexels-photo-6070105.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
             price:1500,
             stock:5,
             color:"verde",
-            type:"panuelo",
+            category:"panuelo",
             description: "pañuelo de seda verde de confeccion artesanal"
         },
         {
             id:7,
             name:"pañuelo negro",
-            img:"https://drive.google.com/file/d/1vDI_639A3_I5xEfB9veknDqKtTWWRH0g/view?usp=sharing",
+            img:"https://images.pexels.com/photos/6046213/pexels-photo-6046213.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
             price:1500,
             stock:5,
             color:"negro",
-            type:"panuelo",
+            category:"panuelo",
             description: "pañuelo de seda negro con puntos blancos de confeccion artesanal"
         } 
 

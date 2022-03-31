@@ -7,9 +7,11 @@
     margin: 25px;
     
   
+img.product-card_image {
+    max-width: 200px;
+}
     .product {
-        display: flex;
-        justify-content: center;
+        
     }
     i {
        display: block;

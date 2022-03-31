@@ -4,25 +4,25 @@ import { arrayProducts } from "../../../assets/listProduct/arrayProducts.js";
 import Card from "../card/index.js"
 
 
-const itemList = () =>{
+const ItemList = () =>{
+  
+  const [products, setProducts] = useState([]);
 
-    const [products, setProducts] = useState([]);
-
-    const getProducts = new Promise((resolve, reject)=> {
+  const getProducts = new Promise((resolve, reject)=> {
         setTimeout( () => {resolve(arrayProducts)} , 2000);
     });
-
+    
     const getProductsArray = async () => {
-        try {
-          const result = await getProducts;
-          setProducts(result);
-
-        } catch (error) {
-          console.log(error);
-          alert('No podemos mostrar los productos en este momento');
-        }
+      try {
+        const result = await getProducts;
+        setProducts(result);
+        
+      } catch (error) {
+        console.log(error);
+        alert('No podemos mostrar los productos en este momento');
+      }
     };
- 
+    
     useEffect(() => { getProductsArray() }, []);  
     
     return (
@@ -34,6 +34,7 @@ const itemList = () =>{
                   return (
                     <div key={products.id}>
                       <Card products={products}/>
+
                     </div>
                   );
                 })
@@ -45,4 +46,4 @@ const itemList = () =>{
     );
 }
 
-export default itemList;
+export default ItemList;
