@@ -1,9 +1,17 @@
 import ItemDetailList from "../components/body/ItemDetailList";
-import { useParams } from "react-router-dom";
+import { useParams ,Link } from "react-router-dom";
+
 
 const ProductDetail = () => {
-    const {id} = useParams();
-    return <ItemDetailList id={id}/>
+    let {id} = useParams();
+    id = parseInt(id);
+    console.log("product detail" + id);
+    return (
+        <>
+            <ItemDetailList id={id}/>
+            <Link to="/"> Volver atrás </Link>
+        </>
+    );
 }
 
 

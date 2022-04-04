@@ -2,22 +2,14 @@ import React,{useState,useEffect} from "react";
 import { arrayProducts } from "../../assets/listProduct/arrayProducts";
 import ItemDetail from "./ItemDetail"
 
-const ItemDetailList = ({ id }) => {
-  const [product, setProduct] = useState(null);
+// pedido del producto especifico
+const getById = (id, arrayProducts) => {
+  
+  return arrayProducts.find((el) => el.id === id);
+} 
 
-  useEffect(() => {
-    getProductById(id, setProduct);
-  }, []);
 
-  return (
-    <section>
-      {product ? <ItemDetail item={product} /> : <p>Obteniendo producto...</p>}
-    </section>
-  );
-};
-
-const getById = (id, array) => arrayProducts.find((el) => el.id === id);
-
+//llamado de asincrono del array
 const getProductById = async (id, setState) => {
   try {
     const result = await arrayProducts;
@@ -26,6 +18,23 @@ const getProductById = async (id, setState) => {
     console.log(error);
   }
 };
+
+const ItemDetailList = ({ id }) => {
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    getProductById(id, setProduct);
+  }, []);
+
+  console.log("el product es " +product);
+  
+  return (
+    <section>
+      {product ? <ItemDetail item={product} /> : <p>Obteniendo producto...</p>}
+    </section>
+  );
+};
+
 
 
 
