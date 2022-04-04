@@ -1,21 +1,23 @@
 import React,{useState,useEffect} from "react";
-import { arrayProducts } from "../../../assets/listProduct/arrayProducts.js";
-import ItemDetail from "../itemDetail/index"
-import { useParams } from 'react-router-dom';
+import { arrayProducts } from "../../assets/listProduct/arrayProducts";
+import ItemDetail from "./ItemDetail"
+
 
 
 
 
 const ItemDetailList = () =>{
-  
+  // hago la promesa con el delay
   const getProduct = new Promise((resolve, reject)=> {
     setTimeout( () => {resolve(arrayProducts)} , 2000);
   });
   
+  //hago el request del array
   const getProductArray = async () => {
     try {
       const result = await getProduct;
       setProduct(result);
+      console.log(result);
       
     } catch (error) {
       console.log(error);
@@ -23,7 +25,7 @@ const ItemDetailList = () =>{
     }
   };
   
-  // funcion de filtrado por id
+  // funcion de filtrado por id y lo guarda en product detail
   
   const filterProductById = (array , id) => {
     return array.map( (product) => {
@@ -34,12 +36,16 @@ const ItemDetailList = () =>{
     })
   }
   // effect para arranque de vida
-  useEffect( () => { getProductArray() }, []);  
+  useEffect( () => { getProductArray()
+  }, []);  
   // effect cuando hay cambio de id
-  useEffect( () => { filterProductById(product, id) }, [id]);
+  useEffect( () => { 
+    filterProductById(product, product.id) 
+  }, [product.id]);
   
   
-  const { id } = useParams();
+  
+  
   const [product, setProduct] = useState({});
   const [productDetail, setProductDetail] = useState([]);
   
@@ -56,8 +62,8 @@ const ItemDetailList = () =>{
                         name={product.name} 
                         img={product.img} 
                         price={product.price} 
-                        id={product.id} 
                         description={product.description} 
+                        id={product.id} 
                         category={product.category}
                       />
 

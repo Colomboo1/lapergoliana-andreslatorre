@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import "./styles.scss";
-import Logo from "../../../assets/logo.svg";
-import Cart from "../cart/index"
+import "./styles/NavBar.scss";
+import Logo from "../../assets/logo.svg";
+import Cart from "./Cart"
 
 function NavBar () {
 

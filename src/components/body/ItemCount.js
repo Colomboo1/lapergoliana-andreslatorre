@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { GoDiffAdded,GoDiffRemoved } from "react-icons/go";
-import "./styles.scss";
+import "./styles/ItemCount.scss";
 
 const ItemCount = () => {
     

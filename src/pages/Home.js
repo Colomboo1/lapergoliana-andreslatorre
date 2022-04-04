@@ -1,5 +1,5 @@
 
-import ItemList from "../productList/itemList/index.js";
+import ItemList from "../components/body/ItemList";
 
 
 const HomePage = () => {

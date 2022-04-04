@@ -1,7 +1,7 @@
 
 import React,{useState,useEffect} from "react";
-import { arrayProducts } from "../../../assets/listProduct/arrayProducts.js";
-import Card from "../card/index.js"
+import { arrayProducts } from "../../assets/listProduct/arrayProducts";
+import Card from "./Card"
 
 
 const ItemList = () =>{

@@ -1,10 +1,8 @@
 import React from 'react';
 
 
-
-const ItemDetail = ({ name, img, price, description}) => {
+const ItemDetail = ({ name, img, price, description, id, category}) => {
     
-
     return (
         <article className="product_card" >
         <img className="product_card_image" src={img} alt="imagen de producto" />

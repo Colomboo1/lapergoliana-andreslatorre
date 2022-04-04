@@ -1,14 +1,18 @@
-@import "../../../scss/abstracts/variable" ;
+@import "../../../scss/abstracts/variable";
 
 .card{
-    background-color: $blue-color;
+    background-color: #8ac6d1;
     border-radius: 4%;
     padding: 15px;
     margin: 25px;
+    display: block;
+
     
   
 img.product-card_image {
     max-width: 200px;
+    max-height: 260px;
+    min-width: 200px;
 }
     .product {
         

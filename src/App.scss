@@ -4,7 +4,7 @@
 body{
     background-image: url("../src/assets/background\ roses.jpg");
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .wrapper{
@@ -16,9 +16,11 @@ body{
 header{
     
     margin-bottom: 25px;
+    padding-top: 12px;
 
 }
 
 article{
-    display: flex;
+    width: min-content;
+    text-align: center;
 }
