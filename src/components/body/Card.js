@@ -10,8 +10,10 @@ function Card ({products}) {
     console.log(products)
     return(
         <div className="card">
+            <Link to={"/:category/:id" }>
+           {/*
           <Link to={"/" + products.category + "/" + products.id}> 
-           {/*<Link to={"/:category/:id" }>*/}
+           */}
                 <div href="Producto" className="product">
                     <Item product={products}/>
                 </div>  

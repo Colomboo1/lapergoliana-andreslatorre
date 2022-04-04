@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { arrayProducts } from "../../assets/listProduct/arrayProducts";
 import ItemDetail from "./ItemDetail"
-
+import { useParams } from "react-router-dom"; 
 
 
 
@@ -44,7 +44,7 @@ const ItemDetailList = () =>{
   }, [product.id]);
   
   
-  
+  const {id, category} = useParams();
   
   const [product, setProduct] = useState({});
   const [productDetail, setProductDetail] = useState([]);

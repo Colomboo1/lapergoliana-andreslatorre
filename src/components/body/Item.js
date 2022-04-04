@@ -1,8 +1,8 @@
 import React from 'react';
-import { useParams} from "react-router-dom";
+
 
 const Item = ({ product }) => {
-  const {id, category} = useParams();
+ 
   return (
       
         <article className="product-card" id= {product.id} >
