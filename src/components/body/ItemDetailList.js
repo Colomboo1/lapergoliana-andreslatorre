@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from "react";
 import { arrayProducts } from "../../assets/listProduct/arrayProducts";
 import ItemDetail from "./ItemDetail"
-import { useParams } from "react-router-dom"; 
 
 
 
@@ -44,7 +43,6 @@ const ItemDetailList = () =>{
   }, [product.id]);
   
   
-  const {id, category} = useParams();
   
   const [product, setProduct] = useState({});
   const [productDetail, setProductDetail] = useState([]);
@@ -55,8 +53,8 @@ const ItemDetailList = () =>{
         {
           productDetail.length ? ( <>
             {
-                productDetail.map((product) => {
-                  return (
+              productDetail.map((product) => {
+                return (
                     <div key={product.id}>
                       <ItemDetail 
                         name={product.name} 

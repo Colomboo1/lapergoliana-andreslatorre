@@ -1,9 +1,9 @@
 import ItemDetailList from "../components/body/ItemDetailList";
-
+import { useParams } from "react-router-dom";
 
 const ProductDetail = () => {
-
-    return <ItemDetailList/>
+    const {id} = useParams();
+    return <ItemDetailList id={id}/>
 }
 
 
