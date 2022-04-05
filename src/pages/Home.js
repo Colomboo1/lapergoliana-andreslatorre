@@ -1,12 +1,14 @@
 
-import ItemList from "../components/body/ItemList";
-
+import ItemDetailList from "../components/body/ItemDetailList";
+import Card from "../components/body/Card";
+ 
 
 const HomePage = () => {
 
    return(
         <article>
-            <ItemList/>
+            <h3>home</h3>
+            <Card/>
         </article> 
 
    );

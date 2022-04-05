@@ -1,41 +1,41 @@
 import React,{useState,useEffect} from "react";
 import { arrayProducts } from "../../assets/listProduct/arrayProducts";
-import ItemDetail from "./ItemDetail"
-
-// pedido del producto especifico
-const getById = (id, arrayProducts) => {
-  
-  return arrayProducts.find((el) => el.id === id);
-} 
-
-
-//llamado de asincrono del array
-const getProductById = async (id, setState) => {
-  try {
-    const result = await arrayProducts;
-    setState(getById(id, result));
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const ItemDetailList = ({ id }) => {
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    getProductById(id, setProduct);
-  }, []);
-
-  console.log("el product es " +product);
-  
-  return (
-    <section>
-      {product ? <ItemDetail item={product} /> : <p>Obteniendo producto...</p>}
-    </section>
-  );
-};
+import ItemDetail from "./ItemDetail";
+import { useParams, Link} from "react-router-dom";
 
 
 
+const getProducts = new Promise((res) => {
+  setTimeout( () => {res(arrayProducts)} , 2000);
+});
 
-export default ItemDetailList;
+
+const ItemDetailList = () => {
+  const[product,setProduct] = useState([]);
+  const{id} = useParams();
+
+  useEffect(() =>{
+    getProducts
+      .then((product) =>{
+        if(id){
+          const idProduct = product.filter((e)=> e.id ===id);
+          setProduct(idProduct);
+        }
+        else{
+          setProduct(product);
+        }
+      }) 
+      .catch((err)=>{
+        console.log(err);
+        alert('No podemos mostrar los productos en este momento');
+      },[id])
+  })
+
+return(
+  <section>
+    {product ? <ItemDetail product={product}/> : <p>Recibiendo Productos</p>}
+  </section>
+)
+}
+
+export default ItemDetailList

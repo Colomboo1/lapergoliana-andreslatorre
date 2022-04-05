@@ -16,7 +16,8 @@ function NavBar () {
                 </Link>
                 <ul className="navbar">
                     <li><button ><Link to={"/"}>home</Link></button></li>
-                    <li><button ><Link to={"/"}>Productos</Link></button></li>
+                    <li><button ><Link to={"/products"}>Productos</Link></button></li>
+                    <li><button ><Link to={"/size"}>Tabla de medidad</Link></button></li>
                     <li><button ><Link to={"/about"}>Nosotros</Link></button></li>
                     <li><button ><Link to={"/contact"}>Contactanos</Link></button></li>
                 </ul>
